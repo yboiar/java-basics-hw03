@@ -6,6 +6,7 @@ public class Student {
   public static int totalRating = 0;
 
   public Student() {
+    count++;
   }
 
   public Student(String name) {
@@ -43,7 +44,6 @@ public class Student {
   public static double getAvgRating() {
     double averageRating = 0.0;
     if (count > 0) averageRating = totalRating / (double) count;
-    System.out.println("Average students rating is: " + averageRating);
     return averageRating;
   }
 
@@ -70,12 +70,12 @@ public class Student {
     Student student3 = new Student("Jacob", 32);
 
     // Display average rating of all students
-    getAvgRating();
+    System.out.println("Average students rating is: " + getAvgRating());
 
     // change rating of the some student
     student1.changeRating(36);
 
     //Display new average rating
-    getAvgRating();
+    System.out.println("Average students rating is: " + getAvgRating());
   }
 }
